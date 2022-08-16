@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+Notices
+{% endblock title %}
+{% block body %}
+<div>
+  <p style="font-size: 30px;background-color: rgb(243, 156, 156); color: white;">Contact us at <a href="tel:9860427451" style="text-decoration: none; color: white; border: 2px solid white; border-radius: 10px;background-color: rgb(8, 104, 104);">9860427451</a> or mail us at aarya.nepal111@gmail.com to upload notices about upcoming your blood donation programmes.</p>
+</div>
+<div style=" color: white; text-align: center;  min-height:100vh; width: 100%;background-image: url('static/bb.jpg');background-size: cover; position:fixed;background-repeat: no-repeat; z-index: -1;">
+<div style="text-align: center; margin: auto; width: auto;">
+  <h1 style="color: white; font-size: 50px;" >UPCOMING PROGRAMS</h1>
+{% for x in notice_list %}
+<ul style="color: white; background-color: rgb(8, 104, 104);margin: 20px 20px; text-align: center; list-style: none; border: 2px solid white; border-radius: 20px; display:inline-block; padding: 10px 10px;">
+<li> {{ x.name }} </li>
+<li> {{ x.time }} </li>
+<li> {{ x.description }} </li>
+</ul>
+</div>
+{% endfor %}
+</div>
+{% endblock body %}

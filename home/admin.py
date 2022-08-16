@@ -1,0 +1,36 @@
+from django.contrib import admin
+
+# Register your models here.
+from .models import Donor, Notice, Usernamepasswords, cshbb, gihbb, hhbb, lbb,listofbank, bhaktapurbloodbank, cbtcbb, nphbb, tuhbb,mwhbb,bhbb, gihbb,hhbb,lbb, nphbb, nhbb, gmhcbb, nmhbb, cshbb, jbtsbb, sbtsbb, mrbtsbb,dbtsbb,pbtsbb,kbtsbb,dhbb,crbtsbb,cmcbtubb,bpkmchbb,rbtsbb, krbtsbb,dbtsbbb
+
+admin.site.register(Donor)
+admin.site.register(Usernamepasswords)
+admin.site.register(Notice)
+admin.site.register(listofbank)
+admin.site.register(bhaktapurbloodbank)
+admin.site.register(cbtcbb)
+admin.site.register(tuhbb)
+admin.site.register(mwhbb)
+admin.site.register(bhbb)
+admin.site.register(gihbb)
+admin.site.register(hhbb)
+admin.site.register(nphbb)
+admin.site.register(nhbb)
+admin.site.register(gmhcbb)
+admin.site.register(nmhbb)
+admin.site.register(cshbb)
+admin.site.register(lbb)
+admin.site.register(jbtsbb)
+admin.site.register(sbtsbb)
+admin.site.register(mrbtsbb)
+admin.site.register(dbtsbb)
+admin.site.register(pbtsbb)
+admin.site.register(kbtsbb)
+admin.site.register(dhbb)
+admin.site.register(crbtsbb)
+admin.site.register(cmcbtubb)
+admin.site.register(bpkmchbb)
+admin.site.register(rbtsbb)
+admin.site.register(krbtsbb)
+admin.site.register(dbtsbbb)
+

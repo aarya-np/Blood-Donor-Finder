@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+List Of Donors
+{% endblock title %}
+{% block body %}
+{% for donor in donor_list %}
+<ul>
+<li> {{ donor}} </li>
+<li> {{ donor.mydistrict}} </li>
+<li> {{ donor.myphone}} </li>
+<li> {{ donor.mytype}} </li>
+</ul>
+  {% endfor %}
+{% endblock body %}

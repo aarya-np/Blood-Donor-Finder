@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+Bhaktapur Blood Bank
+{% endblock title %}
+{% block body %}
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14133.805509557887!2d85.4223017!3d27.6724408!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1a0f1c68f517736d!2sNepal%20Red%20Cross%20Society%20Bhaktapur%20District%20Chapter!5e0!3m2!1sen!2snp!4v1646822197745!5m2!1sen!2snp" width="1532" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<div style=" text-align: center; background-image: url('static/donation.jpg');background-repeat: no-repeat;background-size: cover; ">
+{% for x in bbb_list%}
+<h1 style=" text-align: center; margin: 0; color: aliceblue;">Availability of Blood in Bhaktapur Blood Bank</h1>
+<ul style="list-style: none; text-align: center; border:2px solid black; display: inline-block; width: auto; padding: 40px 100px 40px 100px; border-radius: 20px; font-size: 20px;  background-color: rgb(185, 204, 204); color: black;">
+    <li style="padding: 10px;">A+:{{x.Aplus}}</li>
+    <li style="padding: 10px;">A-:{{x.Aminus}}</li>
+    <li style="padding: 10px;">B+:{{x.Bplus}}</li>
+    <li style="padding: 10px;">B-:{{x.Bminus}}</li>
+    <li style="padding: 10px;">AB+:{{x.ABplus}}</li>
+    <li style="padding: 10px;">AB-:{{x.ABminus}}</li>
+    <li style="padding: 10px;">AB-:{{x.ABminus}}</li>
+    <li style="padding: 10px;">O+:{{x.Oplus}}</li>
+    <li style="padding: 10px;">O-:{{x.Ominus}}</li>
+</ul>
+{%endfor%}
+</div>
+{% endblock body %}

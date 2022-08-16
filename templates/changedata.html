@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}
+Data Updates
+{% endblock title %}
+{% block body %}
+<div style="text-align: center; background-image: url('static/database.png'); background-repeat: no-repeat; background-size: cover;">
+    <h1>Make Updates</h1>
+<form action="/changedata" method='POST' style="border: 2px solid black; display: inline-block; border-radius: 20px;padding: 23px 23px; background-color: floralwhite;">
+    {% csrf_token %}
+    <div>
+        Bank ID:<input type="text" name="bankid">
+    </div>
+    Note:type ID without spaces prior to or after it
+    <div>
+        A+:<input type="text" name="Aplus">
+    </div>
+    <div>
+        A-:<input type="text" name="Aminus">
+    </div>
+    <div>
+        B+:<input type="text" name="Bplus">
+    </div>
+    <div>
+        B-:<input type="text" name="Bminus">
+    </div>
+    <div>
+        AB+:<input type="text" name="ABplus">
+    </div>
+    <div>
+        AB-:<input type="text" name="ABminus">
+    </div>
+    <div>
+        O+:<input type="text" name="Oplus">
+    </div>
+    <div>
+        O-:<input type="text" name="Ominus">
+    </div>
+    <div>
+        <input type="submit" style="padding: 8px 20px;
+        margin: 7px 0;
+        border: 2px solid black;
+        background: none;
+        color: black;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: thistle;">
+    </div>
+    <div>
+        <a href="/bloodbanklogin" style="text-decoration: none; border: 2px solid black; padding: 8px 20px;border-radius: 10px; color: black; background-color: powderblue;">Log Out</a>
+    </div>
+</form> 
+</div>
+{% endblock body %}

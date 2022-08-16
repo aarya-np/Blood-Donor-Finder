@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+Donor list
+{% endblock title %}
+{% block body %}
+<div style="text-align: center;min-height:100vh; width: 100%; height: auto;background-image: url('static/help.jpg');background-size: cover; position:fixed;background-repeat: no-repeat;z-index:-1; color: white;">
+   <h1>Search Donors</h1>
+   <form action="/donorlist" method="post">
+      {% csrf_token %}
+      <div>
+         Enter Blood Type: <input type="text" name="mytype">
+      </div>
+      <div>
+         <input type="submit" style="padding: 8px 20px;
+        margin: 7px 0;
+        border: 2px solid black;
+        background: none;
+        color: black;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: coral;">
+     </div>
+   </form>
+   <div style="margin: auto; width: auto;"></div>
+   <h2>The list of donors will be displayed below</h2> 
+   {% for x in donor_list %}
+   <ul style="list-style: none; border:2px
+ solid black; display: inline-block; padding: 10px 10px; margin: 10px 10px; border-radius: 20px; background-color: coral;">
+<li> Name: {{x}} </li>
+<li> Location: {{ x.mydistrict }} </li>
+<li> Blood Type: {{ x.mytype }} </li>
+<li> Phone: <a href="tel:{{ x.myphone }}" style="text-decoration: none; color:white;">Tap to make a call</a> </li>
+</ul>
+{% endfor %}
+</div>
+{% endblock body %}

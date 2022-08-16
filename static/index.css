@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* NOTICES */
+/* NAVIGATION */
+.navbar{
+    background-color: black;
+    z-index: 1;
+}
+.navbar ul{
+        overflow: auto;
+    }
+.navbar li{
+    float: right;
+     /* it overflows from the parent. so we use overflow auto in the parent */
+    list-style: none;
+    /* removes dots from the lists  */
+    margin: 13px 20px;
+    /* removes the arrow */
+} 
+.navbar li a{
+    padding: 8px 12px;
+    text-decoration: none; 
+    /* removes lines from the words  */
+    color: white;
+    
+}
+.submenudonate{
+    display:none;
+}
+
+.navbar ul li:hover .submenudonate{
+    display: block;
+    position: absolute;
+    background-color: black;
+    color: white;
+}
+.navbar ul li:hover .submenudonate ul{
+    display: grid;
+}
+.submenureceive{
+    display:none;
+}
+.navbar ul li:hover .submenureceive{
+    display: block;
+    position: absolute;
+    background-color: black;
+    color: white;
+}
+.navbar ul li:hover .submenureceive ul{
+    display: grid;
+}
+/* REGISTRATION */
+form div{
+    margin: 10px;
+    padding: 10px;
+}
